@@ -37,4 +37,10 @@ public class Building {
     public void removeResident(String name) {
         residents.remove(name);
     }
+
+    public void removeResidents(String[] names) {
+        for (var v : names){
+            residents.remove(v);
+        }
+    }
 }
