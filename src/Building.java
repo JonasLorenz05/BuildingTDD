@@ -32,4 +32,9 @@ public class Building {
             }
         }
     }
+
+
+    public void removeResident(String name) {
+        residents.remove(name);
+    }
 }

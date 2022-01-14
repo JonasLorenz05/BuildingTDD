@@ -54,4 +54,14 @@ public class BuildingUT {
 
     }
 
+    @Test
+    void IfYouRemoveAResidentItShouldNotBeHereAnymore() {
+        String[] residents = {"Lorenz", "Huber"};
+        Building building = new Building(81, residents);
+        building.removeResident("Huber");
+
+        Assertions.assertEquals(1, Building.getResidents().size());
+        Assertions.assertEquals("Lorenz", Building.getResidents().toArray()[0]);
+
+    }
 }
