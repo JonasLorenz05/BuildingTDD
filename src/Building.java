@@ -42,7 +42,9 @@ public class Building {
 
     public void removeResidents(String[] names) {
         for (var v : names){
-            residents.remove(v);
+            if (!residents.contains(v)){
+                residents.remove(v);
+            }
         }
     }
 }

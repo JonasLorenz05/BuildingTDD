@@ -85,4 +85,18 @@ public class BuildingUT {
 
     }
 
+    @Test
+    void IfYouRemoveTwoResidentsWhichAreNotHereItShouldHappenNothing() {
+        String[] residents = {"Lorenz", "Huber", "Muster"};
+        String[] rem = {"Lor", "Hub", "Mus"};
+        Building building = new Building(81, residents);
+        building.removeResidents(rem);
+
+        Assertions.assertEquals(3, Building.getResidents().size());
+        Assertions.assertEquals("Lorenz", Building.getResidents().toArray()[0]);
+        Assertions.assertEquals("Huber", Building.getResidents().toArray()[1]);
+        Assertions.assertEquals("Muster", Building.getResidents().toArray()[2]);
+
+    }
+
 }
