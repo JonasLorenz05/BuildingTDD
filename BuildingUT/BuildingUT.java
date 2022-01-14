@@ -44,4 +44,14 @@ public class BuildingUT {
 
     }
 
+    @Test
+    void IfYouTryToAddTwoResidentsWhichAreInTheBuildingNothingShouldHappen() {
+        String[] residents = {"Lorenz", "Huber"};
+        Building building = new Building(81, residents);
+        building.addResidents(residents);
+
+        Assertions.assertEquals(2, Building.getResidents().size());
+
+    }
+
 }

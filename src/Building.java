@@ -27,7 +27,9 @@ public class Building {
 
     public void addResidents(String[] names) {
         for (var v : names){
-            residents.add(v);
+            if (!residents.contains(v)){
+                residents.add(v);
+            }
         }
     }
 }
