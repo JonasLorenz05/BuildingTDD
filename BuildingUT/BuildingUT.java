@@ -74,4 +74,15 @@ public class BuildingUT {
 
         Assertions.assertEquals(0, Building.getResidents().size());
     }
+
+    @Test
+    void IfYouRemoveAResidentWhichIsNotHereItShouldHappenNothing() {
+        Building building = new Building(81, "Lorenz");
+        building.removeResident("Muster");
+
+        Assertions.assertEquals(1, Building.getResidents().size());
+        Assertions.assertEquals("Lorenz", Building.getResidents().toArray()[0]);
+
+    }
+
 }
