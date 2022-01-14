@@ -20,8 +20,18 @@ public class BuildingUT {
         Building building = new Building(81, "Lorenz");
         building.addResident("Huber");
 
-        String[] expected = {"Lorenz", "Huber"};
         Assertions.assertEquals("Huber", Building.getResidents().toArray()[1]);
+
+    }
+
+    @Test
+    void ItShouldBePossibleToAddTwoResident() {
+        Building building = new Building(81, "Lorenz");
+        String[] namedToBeAdded = {"Lorenz", "Huber"};
+
+        building.addResidents(namedToBeAdded);
+
+        Assertions.assertEquals(3, Building.getResidents().size());
 
     }
 }

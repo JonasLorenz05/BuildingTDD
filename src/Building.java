@@ -24,4 +24,10 @@ public class Building {
             residents.add(name);
         }
     }
+
+    public void addResidents(String[] names) {
+        for (var v : names){
+            residents.add(v);
+        }
+    }
 }
