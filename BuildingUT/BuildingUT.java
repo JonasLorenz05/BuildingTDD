@@ -25,7 +25,7 @@ public class BuildingUT {
     }
 
     @Test
-    void ItShouldBePossibleToAddTwoResident() {
+    void ItShouldBePossibleToAddTwoResidents() {
         Building building = new Building(81, "Lorenz");
         String[] namedToBeAdded = {"Lorenz", "Huber"};
 
@@ -34,4 +34,6 @@ public class BuildingUT {
         Assertions.assertEquals(3, Building.getResidents().size());
 
     }
+
+
 }
