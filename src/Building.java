@@ -1,23 +1,27 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class Building {
     private static int id;
-    private static String resident;
-    private static String[] residents;
+    private static List<String> residents = new LinkedList<>();
 
     public Building(int id, String resident) {
         this.id = id;
-        this.resident = resident;
+        residents.add(resident);
     }
 
-    public Building(int id, String[] residents) {
-        this.residents = residents;
+    public Building(int id, String[] inputResidents) {
         this.id = id;
+        residents.addAll(List.of(inputResidents));
     }
 
-    public static String getResident() {
-        return resident;
-    }
-
-    public static String[] getResidents() {
+    public static List<String> getResidents() {
         return residents;
+    }
+
+    public void addResident(String name) {
+        if (!residents.contains(name)){
+            residents.add(name);
+        }
     }
 }

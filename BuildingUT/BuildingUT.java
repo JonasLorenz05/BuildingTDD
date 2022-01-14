@@ -5,13 +5,23 @@ public class BuildingUT {
     @Test
     void ItShouldBeOneResidentInBuilding_GivingOneResident() {
         Building building = new Building(81, "Lorenz");
-        Assertions.assertEquals("Lorenz", Building.getResident());
+        Assertions.assertEquals("Lorenz", Building.getResidents().get(0));
     }
     @Test
     void ItShouldBeTwoResidentsInBuilding_GivingTwoResidents() {
         String[] residents = {"Lorenz", "Huber"};
         Building building = new Building(81, residents);
 
-        Assertions.assertEquals(residents, Building.getResidents());
+        Assertions.assertEquals("Huber", Building.getResidents().toArray()[1]);
+    }
+
+    @Test
+    void ItShouldBePossibleToAddAResident() {
+        Building building = new Building(81, "Lorenz");
+        building.addResident("Huber");
+
+        String[] expected = {"Lorenz", "Huber"};
+        Assertions.assertEquals("Huber", Building.getResidents().toArray()[1]);
+
     }
 }
