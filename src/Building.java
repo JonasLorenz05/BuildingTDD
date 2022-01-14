@@ -20,9 +20,9 @@ public class Building {
     }
 
     public void addResident(String name) {
-
+        if (!residents.contains(name)){
             residents.add(name);
-
+        }
     }
 
     public void addResidents(String[] names) {

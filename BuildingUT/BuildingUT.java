@@ -35,5 +35,13 @@ public class BuildingUT {
 
     }
 
+    @Test
+    void IfYouTryToAddTheResidentWhichIsInTheBuildingNothingShouldHappen() {
+        Building building = new Building(81, "Lorenz");
+        building.addResident("Lorenz");
+
+        Assertions.assertEquals(1, Building.getResidents().size());
+
+    }
 
 }
