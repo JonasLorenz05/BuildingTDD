@@ -7,4 +7,11 @@ public class BuildingUT {
         Building building = new Building(81, "Lorenz");
         Assertions.assertEquals("Lorenz", Building.getResident());
     }
+    @Test
+    void ItShouldBeTwoResidentsInBuilding_GivingTwoResidents() {
+        String[] residents = {"Lorenz", "Huber"};
+        Building building = new Building(81, residents);
+
+        Assertions.assertEquals(residents, Building.getResidents());
+    }
 }
