@@ -96,7 +96,6 @@ public class BuildingUT {
         Assertions.assertEquals("Lorenz", Building.getResidents().toArray()[0]);
         Assertions.assertEquals("Huber", Building.getResidents().toArray()[1]);
         Assertions.assertEquals("Muster", Building.getResidents().toArray()[2]);
-
     }
 
 }

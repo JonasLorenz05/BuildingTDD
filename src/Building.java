@@ -19,6 +19,7 @@ public class Building {
         return residents;
     }
 
+
     public void addResident(String name) {
         if (!residents.contains(name)){
             residents.add(name);
@@ -35,14 +36,14 @@ public class Building {
 
 
     public void removeResident(String name) {
-        if (!residents.contains(name)){
+        if (residents.contains(name)){
             residents.remove(name);
         }
     }
 
     public void removeResidents(String[] names) {
         for (var v : names){
-            if (!residents.contains(v)){
+            if (residents.contains(v)){
                 residents.remove(v);
             }
         }
